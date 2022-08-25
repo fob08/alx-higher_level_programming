@@ -4,4 +4,4 @@ if __name__ == "__main__":
     user_input = argv[1:]
     print("{:d} {:s}{:s}".format((len(user_input)), "arguments" if (len(user_input)) != 1 else "argument", "." if (len(user_input)) == 0 else ":"))
     for x, y in enumerate(user_input):
-        print("{:d}: {:s}".format(((x + 1), y)))
+        print("{:d}: {:s}".format(x + 1, y))
