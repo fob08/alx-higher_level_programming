@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-argument = input("write your input")
-arg_list = argument.split(" ")
-for x in arg_list:
-    print("{}: {}").format(((x.index) + 1), x)
+if __name__ == "__main__":
+    from sys import argv
+    for x in argv:
+        print("{}: {}").format(((argv.index) + 1), x)
