@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 if __name__ =="__main__":
-    from sys import argv
-    userinput = (argv[1:])
+    import sys
     add = 0
-    size = len(userinput)
+    size = len(sys.argv)
     if size > 1:
         for i in range(1,size):
-            add += (int(userinput[i]))
+            add += (int(sys.argv[i]))
     print("{:d}".format(add))
 
