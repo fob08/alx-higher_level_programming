@@ -4,6 +4,8 @@ if __name__ =="__main__":
     userinput = (argv[1:])
     add = 0
     size = len(userinput)
-    for i in range(1,size):
-        add+=int(userinput[i])
+    if size > 1:
+        for i in range(1,size):
+            add += (int(userinput[i]))
+    print("{:d}".format(add))
 
