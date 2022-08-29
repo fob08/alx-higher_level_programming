@@ -1,1 +1,1 @@
-My first readme after taking 2 months break from alx
+This directory works on python data structures
