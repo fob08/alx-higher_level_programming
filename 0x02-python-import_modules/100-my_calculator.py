@@ -1,17 +1,15 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
 from sys import argv
-if __name__ == "__main__"
-argv
-operator = argv[2]
-operation = {"+": add, "-": sub, "*": mul, "/": div}
-if len(user_input) != 4:
-    print("Usage: {} <a> <operator> <b>".format(argv[0]))
-    exit(1)
-else:
-    if operator not in operation:
+if __name__ == "__main__":
+    if len(argv) != 4:
+        print("Usage:", argv[0], "<a> <operator> <b>")
+        exit(1)
+    operator = argv[2]
+    op = {"+": add, "-": sub, "*": mul, "/": div}
+    if operator not in op:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
-    else:
-        print("{} {} {} = {}".format(int(argv[1]), operator, int(argv[3]), operation[operator](int(argv[1]),int(argv[3]))))
-
+    a = int(argv[1])
+    b = int(argv[3])
+    print("{:d} {:s} {:d} = {:d}".format(a, operator, b, op[operator](a, b)))
