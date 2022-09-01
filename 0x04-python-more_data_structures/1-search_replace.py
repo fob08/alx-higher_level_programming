@@ -3,7 +3,8 @@ def search_replace(my_list, search, replace):
     if my_list:
         for i in my_list:
             if i != search:
-                return i
+                pass
             else:
-                return replace
+                my_list[i] = replace
+        return my_list
     return None
