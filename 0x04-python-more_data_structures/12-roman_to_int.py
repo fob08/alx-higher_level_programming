@@ -4,14 +4,14 @@ def roman_to_int(roman_string):
         return 0
     if roman_string == "":
         return 0
-    num = 0
-    dic = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    number = 0
+    dico = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     for i, j in zip(roman_string, roman_string[1:]):
-        if i not in dic.keys():
+        if i not in dico.keys():
             return 0
-        elif dic[i] >= dic[j]:
-            num += dic[i]
+        elif dico[i] >= dico[j]:
+            number += dico[i]
         else:
-            num -= dic[i]
-    num += dic[roman_string[-1]]
-    return num
+            number -= dico[i]
+    number += dico[roman_string[-1]]
+    return number
