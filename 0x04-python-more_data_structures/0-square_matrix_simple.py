@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    mat = []
-    new_matrix = []
     if matrix:
+        new_matrix = []
         for i in matrix:
-            for j in i:
-                mat.append(j^2)
-            new_marrix.append(mat)
+            new_matrix.append(list(map(lambda x: x**2, i)))
         return new_matrix
+    return None
